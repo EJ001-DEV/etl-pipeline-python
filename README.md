@@ -1,11 +1,5 @@
 # ETL Pipeline - API to PostgreSQL
 
-## Inicialización completa BD
-
-```bash
-python db/create_database.py
-python -m db.init_db
-python main.py
 
 ## Descripción
 Pipeline ETL que extrae datos desde una API, los transforma, valida y los carga en PostgreSQL con control de idempotencia.
@@ -23,6 +17,15 @@ Pipeline ETL que extrae datos desde una API, los transforma, valida y los carga 
 - SQLAlchemy
 - PostgreSQL
 
-## Ejecución
+## Ejecución:
+
+## Ambiente Dev
 ```bash
 python main.py
+
+## Ambiente Prod
+set APP_ENV=prod
+python main.py
+
+
+
