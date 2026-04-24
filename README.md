@@ -1,7 +1,21 @@
-# ETL Project - API to PostgreSQL
+# ETL Pipeline - API to PostgreSQL
+
+## Inicialización completa BD
+
+```bash
+python db/create_database.py
+python -m db.init_db
+python main.py
 
 ## Descripción
-Pipeline ETL que extrae datos desde una API pública, los transforma, valida y los carga en PostgreSQL usando SQLAlchemy con control de idempotencia.
+Pipeline ETL que extrae datos desde una API, los transforma, valida y los carga en PostgreSQL con control de idempotencia.
+
+## Arquitectura
+- Extract: API REST
+- Transform: limpieza y reglas de negocio con Pandas
+- Load: PostgreSQL usando SQLAlchemy ORM
+- Control: UPSERT con ON CONFLICT (idempotencia)
+- Logging y manejo de errores
 
 ## Tecnologías
 - Python
@@ -9,14 +23,6 @@ Pipeline ETL que extrae datos desde una API pública, los transforma, valida y l
 - SQLAlchemy
 - PostgreSQL
 
-## Características
-- Extracción desde API
-- Transformación de datos
-- Validación
-- Carga con UPSERT (ON CONFLICT)
-- Idempotencia
-
 ## Ejecución
-
 ```bash
 python main.py
