@@ -14,7 +14,8 @@ else:
 
 if __name__ == "__main__":
     print(f"ENV: {Settings.ENV}")
-    print(f"DB_URL: {Settings.DB_URL}")    
+    print(f"DB_URL: {Settings.DB_URL}")   
+     
     create_database() 
     init_db()
     nContador = 0

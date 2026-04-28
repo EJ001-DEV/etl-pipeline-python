@@ -23,7 +23,7 @@ def load_to_db(df):
         df.to_sql(
             name='posts_clean',
             con=engine,
-            if_exists='append',  # ⚠️ no uses replace aquí
+            if_exists='append',  # no uses replace aquí
             index=False
         )
     except Exception as e:

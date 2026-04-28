@@ -21,10 +21,22 @@ Pipeline ETL que extrae datos desde una API, los transforma, valida y los carga 
 
 ## Ambiente Dev
 ```bash
+#CMD
+set APP_ENV=dev
+
+#PowerShell
+$env:APP_ENV="dev"
+
 python main.py
 
 ## Ambiente Prod
+#CMD
 set APP_ENV=prod
+
+#PowerShell
+$env:APP_ENV="prod"
+
+
 python main.py
 
 

@@ -1,11 +1,13 @@
 import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine, text
+from config.settings import Settings
 
 load_dotenv()
 
 def create_database():
-    db_url = os.getenv("DB_URL")
+    db_url = Settings.DB_URL
+    #os.getenv("DB_URL")
 
     # 👉 separar la URL para quitar el nombre de la BD
     base_url = db_url.rsplit("/", 1)[0]
